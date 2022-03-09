@@ -72,7 +72,7 @@ def makeSomething(quest):
 
     elif 'доллар' in quest or 'долар' in quest:
         Dollar_rub = "https://www.google.com/search?q=%D0%BA%D1%83%D1%80%D1%81+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D0%B0&oq=%D0%BA%D1%83&aqs=chrome.4.69i57j35i39l2j69i59j0i131i433i512j69i61l3.4566j0j7&sourceid=chrome&ie=UTF-8"
-        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36"}
+        headers = {"User-Agent": " "} # your user agent
         full_page = requests.get(Dollar_rub, headers=headers)
         soup = BeautifulSoup(full_page.content, "html.parser")
         convert = soup.findAll("span", {"class": "DFlfde", "class":"SwHCTb", "data-precision": 2 })
@@ -81,7 +81,7 @@ def makeSomething(quest):
 
     elif 'евро' in quest or 'euro' in quest:
         euro_rub = "https://www.google.com/search?q=%D0%95%D0%B2%D1%80%D0%BE&oq=%D0%95%D0%B2%D1%80%D0%BE&aqs=chrome..69i57j0i20i131i263i433i512j0i433i512j0i67i433j46i67i199i433i465j0i457i512j0i67j0i131i433i512j0i67i131i433j0i20i263i512.2007j1j7&sourceid=chrome&ie=UTF-8"
-        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36"}
+        headers = {"User-Agent": " "} # your user agent
         full_page = requests.get(euro_rub, headers=headers)
         soup = BeautifulSoup(full_page.content, "html.parser")
         convert = soup.findAll("span", {"class": "DFlfde", "class": "SwHCTb", "data-precision": 2})
