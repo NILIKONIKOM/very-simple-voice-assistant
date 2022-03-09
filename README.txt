@@ -1,4 +1,4 @@
-# very-simple-voice-assistant
+# very-simple-russian-voice-assistant
 Простейший Голосовой Ассистент(воспринимает голос на русском). Умеет говорит курс euro-rub, dollar-rub, искать в гугле то, что скажите, говорить время 
 By - https://github.com/ars1k2 and https://github.com/NILIKONIKOM
 
