@@ -8,7 +8,7 @@ import requests
 from datetime import datetime, date, time
 from random import randint
 
-s = 0
+NumCommands = 0 #Number of commands executed
 
 def talk(words):
     speak_engine = pyttsx3.init()
@@ -24,11 +24,11 @@ def command():
     r = sr.Recognizer()
 
     with sr.Microphone() as source:
-        if s == 0:
+        if NumCommands == 0:
             print("[log]: Говори")
             talk("Говори")
 
-        elif s > 0:
+        elif NumCommands > 0:
             print("[log]: Скажи ещё что-нибудь")
             talk("Скажи ещё что-нибудь")
 
@@ -130,4 +130,4 @@ if __name__ == '__main__':
     talk("Привет, скажи мне что-нибудь.")
     while True:
         makeSomething(command())
-        s+=1
+        NumCommands+=1
